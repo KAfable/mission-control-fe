@@ -10,7 +10,7 @@ import UpdateProduct from "./UpdateProduct";
 import DeleteProduct from "./DeleteProduct";
 
 const Product = props => {
-  console.log("** props.el **", props.el)
+  // console.log("** props.el **", props.el)
 
   const programs = ["web", "ux/ui", "ds"];
   // console.log("PROD", props);
@@ -48,20 +48,13 @@ const Product = props => {
       executeUpdateMutation({ id: editId, name: name })
         .then(res => {
           // console.log(res, e.target.value, name);
-          if (!res.data) {
-            console.log("whoops");
-          } else {
-          }
           props.editProduct(res.data.name);
         })
         .catch(error => {
           console.log(error);
         });
     },
-    [executeUpdateMutation,
-       name,
-        props.active.id
-      ]
+    [executeUpdateMutation, name, props.active.id]
   );
   let error = "";
 
