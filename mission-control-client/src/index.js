@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import ReactDOM from "react-dom";
 import App from "./App";
+import App2 from "./___ANEWSTATE/App2";
 
 //? redux imports
 import { createStore, applyMiddleware, compose } from "redux";
@@ -125,7 +126,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <UrqlProvider value={client}>
-        <App />
+        {/* <App /> */}
+        <App2 />
       </UrqlProvider>
     </Router>
   </Provider>,
