@@ -3,7 +3,9 @@ import AvatarMenu from "./Avatar";
 
 const NavLinksLoggedIn = () => {
   const userToken = JSON.parse(localStorage.getItem("okta-token-storage"));
+
   const {name} = userToken.idToken.claims
+
   return (
     <>
       <p
